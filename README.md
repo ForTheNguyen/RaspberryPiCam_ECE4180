@@ -8,6 +8,7 @@ https://forums.raspberrypi.com/viewtopic.php?t=69163
 https://github.com/PhysicsX/QTonRaspberryPi
 
 //introduction
+//schema how cpp -> qml
 
 //components list
 ---
