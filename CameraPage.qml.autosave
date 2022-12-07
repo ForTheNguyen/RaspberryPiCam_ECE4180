@@ -101,8 +101,8 @@ Item {
 
     Rectangle {
         id: startTimelapse
-        width: 200
-        height: 150
+        width: 250
+        height: 200
         color:"black"
         anchors.bottom: parent.bottom
         anchors.right: parent.right

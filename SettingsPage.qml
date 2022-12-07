@@ -72,8 +72,8 @@ Item {
 
     Rectangle {
         id: enableTimelapse
-        width: 275
-        height: 100
+        width: 300
+        height: 150
         color:"black"
         anchors.centerIn: parent
         border.color: "white"
