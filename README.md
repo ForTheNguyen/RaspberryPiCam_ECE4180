@@ -1,6 +1,7 @@
 # RaspberryPiCam_ECE4180
 64-bit building directly on PI using QTcreator
 
+youtjbe videos
 
 ruha.camera
 https://learn.adafruit.com/adafruit-pitft-28-inch-resistive-touchscreen-display-raspberry-pi
