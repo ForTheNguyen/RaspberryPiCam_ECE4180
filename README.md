@@ -14,7 +14,7 @@ This project combines a high-quality camera with an LCD touchscreen and a Raspbe
 
 ### Components List
 
-[Raspberry Pi 4B+ //TODO](//TODO)
+Raspberry Pi 4B
 
 [High Quality Camera](https://www.adafruit.com/product/4561)
 
