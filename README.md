@@ -84,6 +84,7 @@ https://forums.raspberrypi.com/viewtopic.php?t=69163
 https://github.com/PhysicsX/QTonRaspberryPi
 
 https://github.com/vigasan/RpiGpio
+https://github.com/vigasan/CameraRpi
 
 //introduction
 //schema how cpp -> qml
