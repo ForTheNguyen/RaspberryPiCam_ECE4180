@@ -2,7 +2,9 @@
 64-bit building directly on PI using QTcreator
 
 youtube videos
+
 https://www.youtube.com/watch?v=8PDsi6aq5ho
+
 https://www.youtube.com/watch?v=HxNHlhv74tA
 
 ruha.camera
