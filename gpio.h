@@ -9,18 +9,15 @@
 #include <QObject>
 #include <pigpio.h>
 
-#define GPIO_INPUT 0
-#define GPIO_OUTPUT 1
-
 class gpio : public QObject
 {
         Q_OBJECT
 public:
-    explicit gpio(int pin, int type, void (*isrInput)(int gpio_num, int level, uint32_t tick) = nullptr, QObject *parent = nullptr);
+    explicit gpio(int pb_pin, void (*isrInput)(int gpio_num, int level, uint32_t tick) = nullptr, QObject *parent = nullptr);
     void isrCallback();
 
 private:
-    int m_pin;
+    int pb;
 
 signals:
     void inputChanged(int value);

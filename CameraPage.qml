@@ -25,6 +25,7 @@ Item {
                 photoPreview.visible = true;
                 photoPreview.source = preview;
                 timerPreview.restart();
+                startTimelapse.visible = false;
             }
         }
     }
@@ -47,6 +48,7 @@ Item {
         onTriggered:
         {
             photoPreview.visible = false;
+            startTimelapse.visible = true;
         }
     }
 
@@ -101,8 +103,8 @@ Item {
 
     Rectangle {
         id: startTimelapse
-        width: 200
-        height: 150
+        width: 150
+        height: 100
         color:"black"
         anchors.bottom: parent.bottom
         anchors.right: parent.right

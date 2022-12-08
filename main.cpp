@@ -5,14 +5,21 @@
 #include <QQmlContext>
 
 static void isrInput1(int, int, uint32_t);
+static void isrInput2(int, int, uint32_t);
 
 //construct object to contain pushbutton
-static gpio input1(16, GPIO_INPUT, isrInput1);
+static gpio input1(16, isrInput1);
+static timelapseDelay input2(20,21,isrInput2);
 
 
 static void isrInput1(int gpio, int level, uint32_t tick)
 {
     input1.isrCallback();
+}
+
+static void isrInput2(int gpio, int level, uint32_t tick)
+{
+    input2.isrCallback(20, 21);
 }
 
 static void err_handler (int sig)
@@ -48,9 +55,7 @@ int main(int argc, char *argv[])
 
     QQmlContext* ctx = engine.rootContext();
     ctx->setContextProperty("input1", &input1);
-
-    timelapseDelay delay_get;
-    ctx->setContextProperty("timelapseDelay", &delay_get);
+    ctx->setContextProperty("timelapseDelay", &input2);
 
     const QUrl url(QStringLiteral("qrc:/main.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,

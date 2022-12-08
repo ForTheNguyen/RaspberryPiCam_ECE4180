@@ -8,7 +8,8 @@ CONFIG += c++11
 
 SOURCES += \
         gpio.cpp \
-        main.cpp
+        main.cpp \
+        timelapseDelay.cpp
 
 RESOURCES += qml.qrc
 
