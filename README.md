@@ -1,16 +1,23 @@
 # RaspberryPiCam_ECE4180
 64-bit building directly on PI using QTcreator
 
-youtube videos
+Youtube videos
 
 https://www.youtube.com/watch?v=8PDsi6aq5ho
 
 https://www.youtube.com/watch?v=HxNHlhv74tA
 
+Websites and Repos
+
 ruha.camera
+
 https://learn.adafruit.com/adafruit-pitft-28-inch-resistive-touchscreen-display-raspberry-pi
+
 https://forums.raspberrypi.com/viewtopic.php?t=69163
+
 https://github.com/PhysicsX/QTonRaspberryPi
+
+https://github.com/vigasan/RpiGpio
 
 //introduction
 //schema how cpp -> qml
