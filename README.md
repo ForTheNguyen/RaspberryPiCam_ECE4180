@@ -28,18 +28,17 @@ Power Supply //TODO give some specs like amps and voltage
 
 //TODO picture and a diagram
 
-|Raspberry Pi|LCD|Pushbutton|Encoder|
-|---|---|---|---|
-||||CLK|
-||||DT|
-||||SW|
-||||VCC|
-||||GND|
-|||||
+|Raspberry Pi|Encoder|
+|---|---|
+|GPIO20|CLK|
+|GPIO21|DT|
+|GPIO16|SW|
+|5V|VCC|
+|GND|GND|
 
 ## Software Setup
 
-Install [Raspberry Pi Imager](https://www.raspberrypi.com/software/) on computer and format the SD card with the Raspberry Pi OS (64-bit) operating system.  This systems is necessary for use with QT Creator for the GUI.  Boot up raspberry pi, follow the prompts on the screen, and once finished, run the following commands to update and install necessary software for LCD and GUI.  See installation instructions for [the LCD](https://learn.adafruit.com/adafruit-pitft-28-inch-resistive-touchscreen-display-raspberry-pi?view=all)//TODO and [QT Creator](https://forums.raspberrypi.com/viewtopic.php?t=69163) for more info for these steps.
+Install [Raspberry Pi Imager](https://www.raspberrypi.com/software/) on computer and format the SD card with the Raspberry Pi OS (64-bit) operating system.  This systems is necessary for use with QT Creator for the GUI.  Boot up raspberry pi, follow the prompts on the screen, and once finished, run the following commands to update and install necessary software for LCD and GUI.  See installation instructions for [the LCD](https://learn.adafruit.com/adafruit-pitft-28-inch-resistive-touchscreen-display-raspberry-pi?view=all) and [QT Creator](https://forums.raspberrypi.com/viewtopic.php?t=69163) for more info for these steps.
 
 ```
 sudo apt-get update
