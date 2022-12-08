@@ -8,7 +8,7 @@ David Nguyen, Saniya Datir, Dominik Fill
 
 //Summarize goals of project, desired capabilities, and primary hardware components.
 
-This project combines a high-quality camera with an LCD touchscreen and a Raspberry Pi 4B+ //TODO to create a functional camera held together with a retro 3D printed housing.  This camera has a shutter button to snap pictures and timelapse, and has a GUI that can be used to switch between these modes, to display images taken with the camera that are stored in memory, and to display live view from the camera.  The 3D-printed housing allows space for a battery //TODO and has openings for connections to the camera's tripod mount and the raspberry pi's power connector.  //TODO encoder
+This project combines a high-quality camera with an LCD touchscreen and a Raspberry Pi 4B+ //TODO to create a functional camera held together with a retro 3D printed housing.  This camera has a shutter button to snap pictures and timelapse, and has a GUI that can be used to switch between these modes, to display images taken with the camera that are stored in memory, and to display live view from the camera.  The 3D-printed housing allows space for attachment to a power supply and has openings for connections to the camera's tripod mount and the raspberry pi's power connector.  //TODO encoder
 
 ## Hardware Setup
 
@@ -20,9 +20,7 @@ This project combines a high-quality camera with an LCD touchscreen and a Raspbe
 
 [LCD Touchscreen](https://www.adafruit.com/product/1601)
 
-Pushbutton
-
-[Encoder](//TODO)
+[Encoder with Pushbutton](//TODO)
 
 Power Supply //TODO give some specs like amps and voltage
 
@@ -63,7 +61,7 @@ Say what we achieved, and show videos and maybe pictures.
 
 ## Future work
 
-List some improvements we didn't get around to.
+The most lacking significant improvement is the use of a battery instead of a power supply, and even a rechargable one.  Future work for visual content capabilities includes video capture and playback, and a photo burst capability.  Lastly, the GUI could be further developed to edit images stored in memory.
 
 ## List of similar projects
 
