@@ -8,7 +8,7 @@ David Nguyen, Saniya Datir, Dominik Fill
 
 //Summarize goals of project, desired capabilities, and primary hardware components.
 
-This project combines a high-quality camera with an LCD touchscreen and a Raspberry Pi 4B to create a functional camera held together with a retro 3D printed housing.  This camera has a shutter button to snap pictures and timelapse, and has a GUI that can be used to switch between these modes, to display images taken with the camera that are stored in memory, and to display live view from the camera.  The 3D-printed housing allows space for attachment to a power supply and has openings for connections to the camera's tripod mount and the raspberry pi's power connector.  //TODO encoder
+This project combines a high-quality camera with an LCD touchscreen, an encoder, and a Raspberry Pi 4B to create a functional camera held together with a retro 3D printed housing.  This camera has a shutter button to snap pictures and timelapse, an encoder to control exposure compensation, and has a GUI that can be used to switch between these modes, to display images taken with the camera that are stored in memory, and to display live view from the camera.  The 3D-printed housing allows space for attachment to a power supply and has openings for connections to the camera's tripod mount and the raspberry pi's power connector.  //TODO encoder
 
 ## Hardware Setup
 
