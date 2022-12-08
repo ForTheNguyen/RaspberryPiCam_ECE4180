@@ -20,7 +20,7 @@ This project combines a high-quality camera with an LCD touchscreen and a Raspbe
 
 [LCD Touchscreen](https://www.adafruit.com/product/1601)
 
-[Encoder with Pushbutton](//TODO)
+KY-040 Rotary Encoder Module
 
 Power Supply //TODO give some specs like amps and voltage
 
@@ -30,16 +30,16 @@ Power Supply //TODO give some specs like amps and voltage
 
 |Raspberry Pi|LCD|Pushbutton|Encoder|
 |---|---|---|---|
-|||||
-|||||
-|||||
-|||||
-|||||
+||||CLK|
+||||DT|
+||||SW|
+||||VCC|
+||||GND|
 |||||
 
 ## Software Setup
 
-Install [Raspberry Pi Imager](https://www.raspberrypi.com/software/) on computer and format the SD card with the Raspberry Pi OS (64-bit) operating system.  This systems is necessary for use with QT Creator for the GUI.  Boot up raspberry pi, follow the prompts on the screen, and once finished, run the following commands to update and install necessary software for LCD and GUI.  See installation instructions for [the LCD]()//TODO and [QT Creator](https://forums.raspberrypi.com/viewtopic.php?t=69163) for more info for these steps.
+Install [Raspberry Pi Imager](https://www.raspberrypi.com/software/) on computer and format the SD card with the Raspberry Pi OS (64-bit) operating system.  This systems is necessary for use with QT Creator for the GUI.  Boot up raspberry pi, follow the prompts on the screen, and once finished, run the following commands to update and install necessary software for LCD and GUI.  See installation instructions for [the LCD](https://learn.adafruit.com/adafruit-pitft-28-inch-resistive-touchscreen-display-raspberry-pi?view=all)//TODO and [QT Creator](https://forums.raspberrypi.com/viewtopic.php?t=69163) for more info for these steps.
 
 ```
 sudo apt-get update
@@ -61,7 +61,7 @@ Say what we achieved, and show videos and maybe pictures.
 
 ## Future work
 
-The most lacking significant improvement is the use of a battery instead of a power supply, and even a rechargable one.  Future work for visual content capabilities includes video capture and playback, and a photo burst capability.  Lastly, the GUI could be further developed to edit images stored in memory.
+The most lacking significant improvement is the use of a rechargeable battery instead of a power supply.  Future work for visual content capabilities includes video capture and playback, and a photo burst capability.  Lastly, the GUI could be further developed to edit images stored in memory.
 
 ## List of similar projects
 
