@@ -24,9 +24,9 @@ KY-040 Rotary Encoder Module
 
 Power Supply //TODO give some specs like amps and voltage
 
-### Schematic
+### Wiring
 
-//TODO picture and a diagram
+Attach the camera and LCD according to the picture below, and wire the encoder to the raspberry pi as described in the following pinout.
 
 |Raspberry Pi|Encoder|
 |---|---|
