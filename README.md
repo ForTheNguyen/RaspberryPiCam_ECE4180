@@ -41,10 +41,20 @@ Power Supply //TODO give some specs like amps and voltage
 
 ## Software Setup
 
-Start with formatting SD card followed by Pi configuration settings and Adafruit instructions for LCD software setup and for the camera, then talk about installing QT creator.  Then clone this repository?
+Install [Raspberry Pi Imager](https://www.raspberrypi.com/software/) on computer and format the SD card with the Raspberry Pi OS (64-bit) operating system.  This systems is necessary for use with QT Creator for the GUI.  Boot up raspberry pi, follow the prompts on the screen, and once finished, run the following commands to update and install necessary software for LCD and GUI.  See installation instructions for [the LCD]()//TODO and [QT Creator](https://forums.raspberrypi.com/viewtopic.php?t=69163) for more info for these steps.
+
+```
+sudo apt-get update
+sudo apt-get upgrade
+//TODO adafruit LCD stuff
+//TODO QT creator stuff
+```
+
+Pi configuration settings and Adafruit instructions for LCD software setup and for the camera, then talk about installing QT creator.  Then clone this repository?
 
 ## Assembly
 
+Download all .stl files in this repository and 3D print each of them.  //TODO
 3D print the stl files, get some glue and put this thing together.
 
 ## Results
