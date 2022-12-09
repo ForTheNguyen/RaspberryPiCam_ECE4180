@@ -144,7 +144,7 @@ Our assembly goes into our 3D-printed camera body. There are 3 STL files in the 
 ## Results
 The finished product has a GUI with buttons to change the delay between photos in a timelapse, a page to view taken photos, live view from the camera, a rotary encoder that can also change the timelapse delay, and a physical shutter button. Getting here involved much trial and error setting up a working development environment, solving dependency issues, learning how to integrate C++ objects into a graphics language like QML, reading and debouncing GPIO inputs, setting up interrupt service routines to read from GPIO pins, and how to dynamically update a GUI from an ISR.  
 
-[!](/media/rescaled.mp4 "")
+![](/media/rescaled.mp4 "")
 //sample images
 
 ## Future work
