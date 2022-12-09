@@ -16,7 +16,9 @@ This project combines a high-quality camera with an LCD touchscreen, an encoder,
 
 Raspberry Pi 4B
 
-[High Quality Camera](https://www.adafruit.com/product/4561)
+[Raspberry Pi High Quality HQ Camera - 12MP](https://www.adafruit.com/product/4561)
+
+[16mm 10MP Telephoto Lens for Raspberry Pi HQ Camera - 10MP](https://www.adafruit.com/product/4562)
 
 [LCD Touchscreen](https://www.adafruit.com/product/1601)
 
