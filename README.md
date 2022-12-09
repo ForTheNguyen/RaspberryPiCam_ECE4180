@@ -10,7 +10,7 @@ David Nguyen, Saniya Datir, Dominik Fill
 
 This project combines the Raspberry Pi HQ camera module with an Adafruit 2.8" PiTFT LCD touchscreen, combination pushbutton rotary encoder, and a Raspberry Pi 4B to create a retro-style digital handheld camera.
 
-This camera has a shutter button to take pictures, a rotary encoder to control timelapse settings, and a GUI that can be used to switch between pages, whether it'd to display images taken with the camera, or to display live view from the camera.  The 3D-printed housing still allows access to the HQ camera module's tripod mount and for retro vibes.
+This camera has a shutter button to take pictures, a rotary encoder to control timelapse settings, and a GUI that can be used to switch between screen pages, whether it's to display images taken with the camera, or to display live view from the camera.  The 3D-printed housing gives retro vibes and still allows access to the HQ camera module's tripod mount.
 
 
 
@@ -34,7 +34,7 @@ This camera has a shutter button to take pictures, a rotary encoder to control t
 
 ## LCD
 
-This project will be using the Adafruit PiTFT 2.8" resistive touchscreen as our display and input method. This screen was chosen mainly for convenience as its form factor and driver support allow for easy installation; however, any generic SPI LCD display can also work with a little tinkering. It will be explained more in depth later, but we'll be mirroring the Pi's HDMI output to the display using the fbcp utility rather than having the display act as a raw framebuffer device, also for convenience.
+This project uses the Adafruit PiTFT 2.8" resistive touchscreen as our display and input method. This screen was chosen mainly for convenience as its form factor and driver support allow for easy installation; however, any generic SPI LCD display can also work with a little tinkering. It will be explained more in depth later, but we'll be mirroring the Pi's HDMI output to the display using the fbcp utility rather than having the display act as a raw framebuffer device, also for convenience.
 
 
 ### Wiring
@@ -54,11 +54,14 @@ We'll wire the rotary encoder to some of the Pi's GPIO pins. Two pins for the ro
 |GND|GND|
 
 ## Software Setup
-This project will be done with Qt5 using QML and C++. The more conventional approach would be to set up a cross compiler and tool-chain to develop and compile in qtCreator on your local Linux machine. After a lot of trial and error though, we weren't able to sucessfully do that, so instead, we'll be developing with Qt Creator straight on the Pi. It's not the fastest or most reliable solution, but it's simple and will work just enough for our case. Keep in mind only B-variants and the Zero W 2 can run 64-bit Raspian, so if you do not have a Pi B, then a Linux cross compiler will be your only option. 
+This project was done with Qt5 using QML and C++. A more conventional approach would set up a cross-compiler and toolchain to develop and compile in qtCreator on your local Linux machine. After a lot of trial and error though, we weren't able to sucessfully set it up, so instead, we developed with Qt Creator directly on the Pi. It's not the fastest or most reliable solution, but it's simple and will work just enough for our project. Keep in mind only B-variants and the Zero W 2 can run 64-bit Raspian, so if you do not have a Pi B, then a Linux cross compiler will be your only option. 
 
 Here are some links to cross-compilation tutorials if that's what you have in mind:
+
 [Cross Compile Qt 6 for Raspberry Pi](https://wiki.qt.io/Cross-Compile_Qt_6_for_Raspberry_Pi)
+
 [Cross Compiling Qt for Raspberry Pi 4](https://github.com/UvinduW/Cross-Compiling-Qt-for-Raspberry-Pi-4)
+
 [Cross compilation of Qt6.3.0 on Raspberry pi 4](https://github.com/PhysicsX/QTonRaspberryPi)
 
 
@@ -88,7 +91,7 @@ sudo reboot
 ```
 Now you should be able to open Qt Creator in the programming applications in the start menu. 
 
-When it comes time to build and run a project, it may be necessary change a few options to allow the program to run with root privilages, especially if your project is using the pigpio library since it needs root to intialize (unlike the depreciated WiringPi library replacedby pigpio). 
+When it comes time to build and run a project, it may be necessary change a few options to allow the program to run with root privileges, especially if your project is using the pigpio library since it needs root to intialize (unlike the deprecated WiringPi library replaced by pigpio). 
 ```
 Tools-> Options-> Environment -> Terminal
 Set -e sudo after /usr/bin/xterm
@@ -102,7 +105,7 @@ If you're developing on the Pi like we are, the default make flags can cause the
 make -j2
 ```
 
-When it comes time to install the LCD, Adafruit provides a detailed guide to installing drivers for their LCD's. You should save this step after finishing your project as their easy installer changes the resolution of the HDMI-out to 640x480 if you go the fbcp route. Of course, you can change the resolution back to whatever you desire and the LCD screen will downscale the image to fit automatically. For legibility of text and fonts, it's best to change the resolution back to something closer to the LCD after you're done developing. In this case, the Adafruit 2.8" PiTFT has a resolution of 320x240. Setting the HDMI resolution to 640x480 causes the image to downscale with a factor of 2 for the LCD. 
+When it comes time to install the LCD, Adafruit provides a detailed guide to installing drivers for their LCDs. You should save this step after finishing your project as their easy installer changes the resolution of the HDMI-out to 640x480 if you go the fbcp route. Of course, you can change the resolution back to whatever you desire and the LCD screen will downscale the image to fit automatically. For legibility of text and fonts, it's best to change the resolution back to something closer to the LCD after you're done developing. In this case, the Adafruit 2.8" PiTFT has a resolution of 320x240. Setting the HDMI resolution to 640x480 causes the image to downscale with a factor of 2 for the LCD. 
 
 Adafruit's Easy Installer provides three options for configuring the LCD: console mode, HDMI mirror mode, and raw framebuffer mode. Console mode outputs only text to the LCD and no touchscreen functionality. Mirror mode will mirror the HDMI output onto the LCD using fbcp, a framebuffer utility. Raw framebuffer mode will only display through code (i.e. you have to write a program and send it manually to the LCD), leaving the HDMI output untouched. This project will use the HDMI mirror mode for simplicity at the expense of some efficiency.
 
@@ -139,15 +142,15 @@ Our assembly goes into our 3D-printed camera body. Obviously this design still n
 
 
 ## Results
-The finished product has a GUI with buttons to change the delay between photos in a timelapse, a page to view taken photos, live view from the camera, rotary encoder that can also change the timelapse delay, and a physical shutter button. Getting here involved much trial and error setting up a working development environment, solving dependency issues, learning how to integrate C++ objects into a graphics language like QML, reading and debouncing GPIO inputs, setting up interrupt service routines to read from GPIO pins, and how to dynamically update a GUI from an ISR.  
+The finished product has a GUI with buttons to change the delay between photos in a timelapse, a page to view taken photos, live view from the camera, a rotary encoder that can also change the timelapse delay, and a physical shutter button. Getting here involved much trial and error setting up a working development environment, solving dependency issues, learning how to integrate C++ objects into a graphics language like QML, reading and debouncing GPIO inputs, setting up interrupt service routines to read from GPIO pins, and how to dynamically update a GUI from an ISR.  
 
 //insert timelapse video here
 //sample images
 
 ## Future work
-There are features that unfortunately were cut from the project one being manual exposure control using GPIO inputs. The issue being that the Qt libraries responsible for communicating with the camera module had difficulty getting and setting software values like shutter speed and exposure compensation. Some further investigation will be needed to solve that issue. Another future goal would be to sucessfully cross compile projects onto the Pi as developing on the Pi itself can be unstable and slow. It also allows for flexibility with Pi platforms and the use of smaller Pi's like the Pi Zero series.
+There are features that unfortunately were cut from the project, such as manual exposure control using GPIO inputs. The issue was that the Qt libraries responsible for communicating with the camera module had difficulty getting and setting software values like shutter speed and exposure compensation. Some further investigation will be needed to solve that issue. Another future goal would be to sucessfully cross-compile projects onto the Pi as developing on the Pi itself can be unstable and slow. It also allows for flexibility with Pi platforms and the use of smaller Pi's like the Pi Zero series.
 
-## References
+## Referenced Examples
 This was our team's first time developing a GUI with QML and C++, and these references below were invaluable to teaching us the software schema involved. Documentation for Qt development on Pi's is sparce and dated so a lot of work was needed in replacing depreciated dependencies and adapting code to use new libraries, such as replacing WiringPi with pigpio.  
 
 [Interfacing GPIO with QML](https://github.com/vigasan/RpiGpio)
