@@ -77,7 +77,7 @@ https://www.youtube.com/watch?v=8PDsi6aq5ho
 
 Websites and Repos
 
-ruha.camera
+[ruha.camera](ruha.camera)
 
 https://www.instructables.com/Vintage-Raspberry-Pi-Camera/
 
