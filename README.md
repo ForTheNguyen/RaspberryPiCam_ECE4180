@@ -20,7 +20,7 @@ Raspberry Pi 4B
 
 [16mm 10MP Telephoto Lens for Raspberry Pi HQ Camera - 10MP](https://www.adafruit.com/product/4562)
 
-[LCD Touchscreen](https://www.adafruit.com/product/1601)
+[Adafruit PiTFT - 320x240 2.8" TFT+Touchscreen for Raspberry Pi](https://www.adafruit.com/product/1601)
 
 KY-040 Rotary Encoder Module
 
