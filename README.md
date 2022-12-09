@@ -39,7 +39,7 @@ This project will be using the Adafruit PiTFT 2.8" resistive touchscreen as our 
 The LCD sits neatly on top of the Pi occupying the first 26 pins of the Pi's header, leaving a few pins open for us to use as GPIO inputs. Attach the camera and LCD like the picture below; the LCD should connect to pins 1 through 26 on the raspberry pi, which include the SPI pins that the LCD uses.
 
 
-![this is an image](IMG-8537.jpg "")
+![All plugged in](IMG-8537.jpg "")
 
 We'll wire the rotary encoder to some of the Pi's GPIO pins. Two pins for the rotary encoder, CLK and DT, and one pin for the pushbutton, SW. The encoder module will need 3-5V power as well. In this case since the LCD occupies all of the Pi's VCC pins, we'll have to tie into the 26-pin socket on the LCD intended for the optional ribbon cable. 
 
@@ -124,6 +124,8 @@ See the full installation instructions for [the LCD](https://learn.adafruit.com/
 
 ## Assembly
 Our assembly goes into our 3D-printed camera body. Obviously this design still needs some tweaking, but will be sufficient for testing out the program and hardware elements.
+![It kinda fit.](788E84C5-32A6-4CE9-B882-85BF2F5613DF.jpeg "")
+
 
 ## Results
 
