@@ -47,6 +47,8 @@ Wire the encoder to the raspberry pi as described in the following pinout.
 Install [Raspberry Pi Imager](https://www.raspberrypi.com/software/) on computer and format the SD card with the Raspberry Pi OS (64-bit) operating system.  This systems is necessary for use with QT Creator for the GUI.  Boot up raspberry pi, follow the prompts on the screen, and once finished, run the following commands to update and install necessary software for LCD and GUI.
 See installation instructions for [the LCD](https://learn.adafruit.com/adafruit-pitft-28-inch-resistive-touchscreen-display-raspberry-pi?view=all) and [QT Creator](https://forums.raspberrypi.com/viewtopic.php?t=69163) for more info for these steps.  [This link lists possible libraries needed for installing)(https://github.com/PhysicsX/QTonRaspberryPi).
 
+Other stuff: https://forums.raspberrypi.com/viewtopic.php?t=69163
+
 ```
 sudo apt-get update
 sudo apt-get upgrade
@@ -82,8 +84,6 @@ The most lacking significant improvement is the use of a rechargeable battery in
 [Vintage Raspberry Pi Camera](https://www.instructables.com/Vintage-Raspberry-Pi-Camera/)
 
 [Raspberry Pi Makes Your Retro Analogue Camera Digital](https://www.raspberrypi.com/news/raspberry-pi-makes-your-retro-analogue-camera-digital/)
-
-https://forums.raspberrypi.com/viewtopic.php?t=69163
 
 ## Notes (should be deleted eventually)
 
