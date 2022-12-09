@@ -77,17 +77,17 @@ https://www.youtube.com/watch?v=8PDsi6aq5ho
 
 Websites and Repos
 
-[ruha.camera](ruha.camera)
+[Ruha Camera](https://github.com/penk/ruha.camera)
 
-https://www.instructables.com/Vintage-Raspberry-Pi-Camera/
+[Vintage Raspberry Pi Camera](https://www.instructables.com/Vintage-Raspberry-Pi-Camera/)
 
-https://www.raspberrypi.com/news/raspberry-pi-makes-your-retro-analogue-camera-digital/
+[Raspberry Pi Makes Your Retro Analogue Camera Digital](https://www.raspberrypi.com/news/raspberry-pi-makes-your-retro-analogue-camera-digital/)
 
 https://forums.raspberrypi.com/viewtopic.php?t=69163
 
-https://github.com/vigasan/RpiGpio
+[Project that interfaces GPIO with QML](https://github.com/vigasan/RpiGpio)
 
-https://github.com/vigasan/CameraRpi
+[Project that intefaces the camera with C++ and QML](https://github.com/vigasan/CameraRpi)
 
 ## Notes (should be deleted eventually)
 
