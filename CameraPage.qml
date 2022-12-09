@@ -59,7 +59,7 @@ Item {
         onInputChanged:
         {
             if (value == 0){
-                camera.imageCapture.capture();
+                camera.imageCapture.captureToLocation("/home/pi/Pictures/");
             }
 
         }
@@ -87,7 +87,7 @@ Item {
         interval: timelapseDelay.getDelay()
         onTriggered:
         {
-            camera.imageCapture.capture();
+            camera.imageCapture.captureToLocation("/home/pi/Pictures/");
         }
 
     }

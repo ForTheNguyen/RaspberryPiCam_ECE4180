@@ -1,4 +1,3 @@
-// Taken from https://github.com/vigasan/CameraRpi/blob/main/CameraRpi/GalleryPage.qml
 import QtQuick 2.0
 import Qt.labs.folderlistmodel 2.12
 

@@ -217,6 +217,7 @@ Item {
                 downButton.visible = false;
                 timelapse_delayText.visible = false;
                 disableTimelapse.visible = false;
+                timelapseDelay.setDelay();
             }
         }
 

@@ -7,7 +7,8 @@ timelapseDelay::timelapseDelay(int clk_pin, int dt_pin, void (*isrInput)(int gpi
     gpioInitialise();
     gpioSetMode(clk, PI_INPUT);
     gpioSetMode(dt, PI_INPUT);
-    gpioSetAlertFunc(clk, isrInput);
+    gpioGlitchFilter(clk, 300000);
+    gpioSetISRFunc(clk, RISING_EDGE, 0, isrInput);
 
 }
 
@@ -22,7 +23,7 @@ void timelapseDelay::isrCallback(int clk_pin, int dt_pin)
     {
         if (dtState != clkState){
           delay_value -= 1000;
-        } else {
+        } else if (dtState == clkState) {
           delay_value += 1000;
         }
         if(delay_value<1000){delay_value=1000;}

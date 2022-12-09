@@ -17,6 +17,7 @@ public:
     explicit timelapseDelay(int clk_pin, int dt_pin, void (*isrInput)(int gpio_num, int level, uint32_t tick) = nullptr, QObject *parent = nullptr);
     void isrCallback(int clk_pin, int dt_pin);
     Q_INVOKABLE int getDelay() const { return delay_value; }
+    Q_INVOKABLE void setDelay() { delay_value = 1000; emit delayChanged(delay_value);}
     Q_INVOKABLE int getDelayAdjusted() const { return delay_value/1000; }
     Q_INVOKABLE void addDelay() { delay_value += 1000; emit delayChanged(delay_value);}
     Q_INVOKABLE void subDelay() { delay_value -= 1000; if(delay_value<1000){delay_value=1000;} emit delayChanged(delay_value);}
