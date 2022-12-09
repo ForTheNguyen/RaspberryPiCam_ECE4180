@@ -95,6 +95,12 @@ Set -e sudo after /usr/bin/xterm
 ```
 Also configure to run in terminal. In Run settings (left-side menu) check the box 'Run in Terminal'.
 
+If you're developing on the Pi like we are, the default make flags can cause the Pi to lock up on Build thanks to its limited processing power. A Pi 4B has a relatively fast quad-core processor but running an IDE and building can still be too much for it at times. There is a setting in the Build menu to change the number of parallel threads that are opened during a build. In our case, 1-2 threads seems to be the most stable. You can also change the make flags manually.
+
+```
+//dictates number of parallel threads opened for building
+make -j2
+```
 
 When it comes time to install the LCD, Adafruit provides a detailed guide to installing drivers for their LCD's. You should save this step after finishing your project as their easy installer changes the resolution of the HDMI-out to 640x480 if you go the fbcp route. Of course, you can change the resolution back to whatever you desire and the LCD screen will downscale the image to fit automatically. For legibility of text and fonts, it's best to change the resolution back to something closer to the LCD after you're done developing. In this case, the Adafruit 2.8" PiTFT has a resolution of 320x240. Setting the HDMI resolution to 640x480 causes the image to downscale with a factor of 2 for the LCD. 
 
@@ -133,18 +139,20 @@ Our assembly goes into our 3D-printed camera body. Obviously this design still n
 
 
 ## Results
+The finished product has a GUI with buttons to change the delay between photos in a timelapse, a page to view taken photos, live view from the camera, rotary encoder that can also change the timelapse delay, and a physical shutter button. Getting here involved much trial and error setting up a working development environment, solving dependency issues, learning how to integrate C++ objects into a graphics language like QML, reading and debouncing GPIO inputs, setting up interrupt service routines to read from GPIO pins, and how to dynamically update a GUI from an ISR.  
 
-Say what we achieved, and show videos and maybe pictures.
+//insert timelapse video here
+//sample images
 
 ## Future work
-
-The most lacking significant improvement is the use of a rechargeable battery instead of a power supply.  Future work for visual content capabilities includes video capture and playback, and a photo burst capability.  Lastly, the GUI could be further developed to edit images stored in memory.
+There are features that unfortunately were cut from the project one being manual exposure control using GPIO inputs. The issue being that the Qt libraries responsible for communicating with the camera module had difficulty getting and setting software values like shutter speed and exposure compensation. Some further investigation will be needed to solve that issue. Another future goal would be to sucessfully cross compile projects onto the Pi as developing on the Pi itself can be unstable and slow. It also allows for flexibility with Pi platforms and the use of smaller Pi's like the Pi Zero series.
 
 ## References
+This was our team's first time developing a GUI with QML and C++, and these references below were invaluable to teaching us the software schema involved. Documentation for Qt development on Pi's is sparce and dated so a lot of work was needed in replacing depreciated dependencies and adapting code to use new libraries, such as replacing WiringPi with pigpio.  
 
-[Project that interfaces GPIO with QML](https://github.com/vigasan/RpiGpio)
+[Interfacing GPIO with QML](https://github.com/vigasan/RpiGpio)
 
-[Project that intefaces the camera with C++ and QML](https://github.com/vigasan/CameraRpi)
+[Using Qt Multimedia to access a camera](https://github.com/vigasan/CameraRpi)
 
 ## List of similar projects
 
