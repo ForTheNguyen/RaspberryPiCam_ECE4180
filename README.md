@@ -1,6 +1,6 @@
 # Raspberry Pi Handheld Touchscreen Camera with Touchscreen and HQ Camera Module
 
-![cover](4FC4117C-1A5B-4631-A08B-EB8956C44C58.jpeg "")
+![media/cover](4FC4117C-1A5B-4631-A08B-EB8956C44C58.jpeg "")
 
 Project Team Members:
 David Nguyen, Saniya Datir, Dominik Fill
