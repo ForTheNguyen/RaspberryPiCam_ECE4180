@@ -26,7 +26,11 @@ Power Supply //TODO give some specs like amps and voltage
 
 ### Wiring
 
-Attach the camera and LCD according to the picture below, and wire the encoder to the raspberry pi as described in the following pinout.
+Attach the camera and LCD according to the picture below; the LCD should connect to pins 1 through 26 on the raspberry pi, which include the SPI pins that the LCD uses.
+
+//TODO picture
+
+Wire the encoder to the raspberry pi as described in the following pinout.
 
 |Raspberry Pi|Encoder|
 |---|---|
@@ -52,7 +56,7 @@ Pi configuration settings and Adafruit instructions for LCD software setup and f
 ## Assembly
 
 Download all .stl files in this repository and 3D print each of them.  //TODO
-3D print the stl files, get some glue and put this thing together.
+First screw 
 
 ## Results
 
