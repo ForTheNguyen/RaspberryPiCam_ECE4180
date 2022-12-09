@@ -41,7 +41,7 @@ This project uses the Adafruit PiTFT 2.8" resistive touchscreen as our display a
 The LCD sits neatly on top of the Pi occupying the first 26 pins of the Pi's header, leaving a few pins open for us to use as GPIO inputs. Attach the camera and LCD like the picture below; the LCD should connect to pins 1 through 26 on the raspberry pi, which include the SPI pins that the LCD uses.
 
 
-![All plugged in](IMG-8537.jpg "")
+![All plugged in](/media/IMG-8537.jpg "")
 
 We'll wire the rotary encoder to some of the Pi's GPIO pins. Two pins for the rotary encoder, CLK and DT, and one pin for the pushbutton, SW. The encoder module will need 3-5V power as well. In this case since the LCD occupies all of the Pi's VCC pins, we'll have to tie into the 26-pin socket on the LCD intended for the optional ribbon cable. 
 
@@ -137,14 +137,14 @@ sudo nano /boot/config.txt
 Our assembly goes into our 3D-printed camera body. There are 3 STL files in the repo that should be printed with at least 10% infill density and assembled with the rest of the hardware.  Obviously this design still needs some tweaking, but will be sufficient for testing out the program and hardware elements.
 |Screen|Live|
 ---|---
-![Live](0B1FB612-A941-4110-AC03-1E528FE60D9A.jpeg "")|![Screen](E16430FE-3908-4460-BE77-C593715A7C01.jpeg "")
+![Live](/media/0B1FB612-A941-4110-AC03-1E528FE60D9A.jpeg "")|![Screen](/media/E16430FE-3908-4460-BE77-C593715A7C01.jpeg "")
 
 
 
 ## Results
 The finished product has a GUI with buttons to change the delay between photos in a timelapse, a page to view taken photos, live view from the camera, a rotary encoder that can also change the timelapse delay, and a physical shutter button. Getting here involved much trial and error setting up a working development environment, solving dependency issues, learning how to integrate C++ objects into a graphics language like QML, reading and debouncing GPIO inputs, setting up interrupt service routines to read from GPIO pins, and how to dynamically update a GUI from an ISR.  
 
-//insert timelapse video here
+[!](/media/rescaled.mp4 "")
 //sample images
 
 ## Future work
