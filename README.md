@@ -53,6 +53,8 @@ We'll wire the rotary encoder to some of the Pi's GPIO pins. Two pins for the ro
 |5V|VCC|
 |GND|GND|
 
+![schematic](https://user-images.githubusercontent.com/120064823/206805936-4824a795-c75f-47a5-8ac4-937ad2887391.jpg)
+
 ## Software Setup
 This project was done with Qt5 using QML and C++. A more conventional approach would set up a cross-compiler and toolchain to develop and compile in qtCreator on your local Linux machine. After a lot of trial and error though, we weren't able to sucessfully set it up, so instead, we developed with Qt Creator directly on the Pi. It's not the fastest or most reliable solution, but it's simple and will work just enough for our project. Keep in mind only B-variants and the Zero W 2 can run 64-bit Raspian, so if you do not have a Pi B, then a Linux cross compiler will be your only option. 
 
