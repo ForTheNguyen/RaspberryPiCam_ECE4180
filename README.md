@@ -148,7 +148,11 @@ The finished product has a GUI with buttons to change the delay between photos i
 
 https://user-images.githubusercontent.com/24662481/206802816-a5761462-3de4-4ef2-9488-67cef155458a.mov
 
-https://user-images.githubusercontent.com/24662481/206802840-1f3ca048-bdbe-4996-aee3-9f6896f861b2.mp4
+
+https://user-images.githubusercontent.com/24662481/206803031-196dc752-e478-45d0-b4c1-86a59b396247.mp4
+
+
+
 
 ## Future work
 There are features that unfortunately were cut from the project, such as manual exposure control using GPIO inputs. The issue was that the Qt libraries responsible for communicating with the camera module had difficulty getting and setting software values like shutter speed and exposure compensation. Some further investigation will be needed to solve that issue. Another future goal would be to sucessfully cross-compile projects onto the Pi as developing on the Pi itself can be unstable and slow. It also allows for flexibility with Pi platforms and the use of smaller Pi's like the Pi Zero series.
