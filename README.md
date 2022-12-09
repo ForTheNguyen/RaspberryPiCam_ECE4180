@@ -77,10 +77,6 @@ The most lacking significant improvement is the use of a rechargeable battery in
 
 ## List of similar projects
 
-Youtube videos
-
-https://www.youtube.com/watch?v=8PDsi6aq5ho
-
 Websites and Repos
 
 [Ruha Camera](https://github.com/penk/ruha.camera)
