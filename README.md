@@ -64,8 +64,6 @@ The most lacking significant improvement is the use of a rechargeable battery in
 
 ## List of similar projects
 
-64-bit building directly on PI using QTcreator
-
 Youtube videos
 
 https://www.youtube.com/watch?v=8PDsi6aq5ho
@@ -85,6 +83,8 @@ https://github.com/PhysicsX/QTonRaspberryPi
 https://github.com/vigasan/RpiGpio
 https://github.com/vigasan/CameraRpi
 
+## Notes (should be deleted eventually)
+
 //introduction
 //schema how cpp -> qml
 
@@ -96,6 +96,8 @@ https://github.com/vigasan/CameraRpi
 
 rpi setup
 //todo: sd card imaging process, ssh, vnc
+
+64-bit building directly on PI using QTcreator
 
 terminal commands
 sudo apt-get update
