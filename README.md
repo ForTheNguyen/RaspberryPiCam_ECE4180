@@ -8,7 +8,7 @@ David Nguyen, Saniya Datir, Dominik Fill
 
 This project combines the Raspberry Pi HQ camera module with an Adafruit 2.8" PiTFT LCD touchscreen, combination pushbutton rotary encoder, and a Raspberry Pi 4B to create a retro-style digital handheld camera.
 
-This camera has a shutter button to take pictures, a rotary encoder to control timelapse settings, and a GUI that can be used to switch between pages, whether it'd to display images taken with the camera, or to display live view from the camera.  The 3D-printed housing still allows access to the HQ camera module's tripod mount.
+This camera has a shutter button to take pictures, a rotary encoder to control timelapse settings, and a GUI that can be used to switch between pages, whether it'd to display images taken with the camera, or to display live view from the camera.  The 3D-printed housing still allows access to the HQ camera module's tripod mount and for retro vibes.
 
 
 
@@ -52,21 +52,51 @@ We'll wire the rotary encoder to some of the Pi's GPIO pins. Two pins for the ro
 |GND|GND|
 
 ## Software Setup
-This project will be done with QML and C++ for the front and backend respectively. The more conventional approach would be to set up a cross compiler and tool-chain to develop and compile in qtCreator on your local Linux machine. After a lot of trial and error though, we weren't able to sucessfully do that, so instead, we'll be developing with qtCreator straight on the Pi. It's not the fastest or most reliable solution, but it's simple and will work just enough for our case. Keep in mind only B-variants and the Zero W 2 can run 64-bit Raspian, so if you do not have a Pi B, then a Linux cross compiler will be your only option. 
+This project will be done with Qt5 using QML and C++. The more conventional approach would be to set up a cross compiler and tool-chain to develop and compile in qtCreator on your local Linux machine. After a lot of trial and error though, we weren't able to sucessfully do that, so instead, we'll be developing with Qt Creator straight on the Pi. It's not the fastest or most reliable solution, but it's simple and will work just enough for our case. Keep in mind only B-variants and the Zero W 2 can run 64-bit Raspian, so if you do not have a Pi B, then a Linux cross compiler will be your only option. 
+
+Here are some links to cross-compilation tutorials if that's what you have in mind:
+[Cross Compiling Qt for Raspberry Pi 4](https://github.com/UvinduW/Cross-Compiling-Qt-for-Raspberry-Pi-4)
+[Cross compilation of Qt6.3.0 on Raspberry pi 4](https://github.com/PhysicsX/QTonRaspberryPi)
+
 
 First we'll need a 64-bit image of Raspian OS on our Pi. The setup process is fairly standard, and the Pi Foundation has a great application to help us out.
 Install [Raspberry Pi Imager](https://www.raspberrypi.com/software/) on your computer, start it up, and select your boot drive. Then select your desired operating system (Raspberry Pi OS 64-bit Bullseye, the latest release at this time) and hit write. After that, plug your boot drive into the Pi and continue with the set up process. If you're developing headless, then it helps to set up SSH and WiFi settings in the Raspberry Pi Imager before writing to the drive (the gear icon bottom right). 
 
-See installation instructions for [the LCD](https://learn.adafruit.com/adafruit-pitft-28-inch-resistive-touchscreen-display-raspberry-pi?view=all) and [QT Creator](https://forums.raspberrypi.com/viewtopic.php?t=69163) for more info for these steps.  [This link lists possible libraries needed for installing)(https://github.com/PhysicsX/QTonRaspberryPi).
-
-Other stuff: https://forums.raspberrypi.com/viewtopic.php?t=69163
+Once we're through to the desktop, fire up the terminal, and we'll start downloading the dependencies needed for running Qt Creator with Qt5.
 
 ```
 sudo apt-get update
 sudo apt-get upgrade
-//TODO adafruit LCD stuff
-//TODO QT creator stuff
 ```
+```
+$ sudo apt-get install qtbase5-dev qtchooser
+$ sudo apt-get install qt5-qmake qtbase5-dev-tools
+$ sudo apt-get install qtcreator
+$ sudo apt-get install qtdeclarative5-dev
+```
+Libraries for Qt5 Multimedia and Qt5 folderlistmodel 
+```
+sudo apt-get install libqt5multimedia5-plugins qml-module-qtmultimedia
+sudo apt-get install qml-module-qt-labs-folderlistmodel
+```
+Of course, a reboot would be best.
+```
+sudo reboot
+```
+Now you should be able to open Qt Creator in the programming applications in the start menu. 
+
+When it comes time to build and run a project, it may be necessary change a few options to allow the program to run with root privilages, especially if your project is using the pigpio library since it needs root to intialize (unlike the depreciated WiringPi library replacedby pigpio). 
+```
+Tools-> Options-> Environment -> Terminal
+Set -e sudo after /usr/bin/xterm
+```
+Also configure to run in terminal. In Run settings (left-side menu) check the box 'Run in Terminal'.
+
+
+When it comes time to install the LCD, Adafruit provides a detailed guide to installing drivers for their LCD's. You should save this step after finishing your project as their easy installer changes the resolution of the HDMI-out to 640x480 if you go the fbcp route. Of course, you can change the resolution back to whatever you desire and the LCD screen will downscale the image to fit automatically. For legibility of text and fonts, it's best to change the resolution back to something closer to the LCD after you're done developing. In this case, the Adafruit 2.8" PiTFT has a resolution of 320x240. Setting the HDMI resolution to 640x480 causes the image to downscale with a factor of 2 for the LCD. 
+
+
+See installation instructions for [the LCD](https://learn.adafruit.com/adafruit-pitft-28-inch-resistive-touchscreen-display-raspberry-pi?view=all) and [QT Creator](https://forums.raspberrypi.com/viewtopic.php?t=69163) for more info for these steps.  [This link lists possible libraries needed for installing)(https://github.com/PhysicsX/QTonRaspberryPi).
 
 Pi configuration settings and Adafruit instructions for LCD software setup and for the camera, then talk about installing QT creator.  Then clone this repository?
 
