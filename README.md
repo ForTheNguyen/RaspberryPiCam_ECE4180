@@ -6,11 +6,12 @@ David Nguyen, Saniya Datir, Dominik Fill
 
 ## Project Overview
 
-//Summarize goals of project, desired capabilities, and primary hardware components.
-
-This project combines the Raspberry Pi HQ camera module with an LCD touchscreen, combination pushbutton rotary encoder, and a Raspberry Pi 4B to create a retro-style digital handheld camera.
+This project combines the Raspberry Pi HQ camera module with an Adafruit 2.8" PiTFT LCD touchscreen, combination pushbutton rotary encoder, and a Raspberry Pi 4B to create a retro-style digital handheld camera.
 
 This camera has a shutter button to take pictures, a rotary encoder to control timelapse settings, and a GUI that can be used to switch between pages, whether it'd to display images taken with the camera, or to display live view from the camera.  The 3D-printed housing still allows access to the HQ camera module's tripod mount.
+
+
+
 
 ## Hardware Setup
 
@@ -27,11 +28,18 @@ Raspberry Pi 4B (or any Raspberry Pi platform capable of running 64-bit Raspian)
 
 KY-040 Rotary Encoder Module
 
-Power Supply 
+Wires for connecting the rotary encoder to the Pi's GPIO
+
+## LCD
+
+This project will be using the Adafruit PiTFT 2.8" resistive touchscreen as our display and input method. This screen was chosen mainly for convenience as its form factor and driver support allow for easy installation; however, any generic SPI LCD display can also work with a little tinkering. It will be explained more in depth later in this writeup, but we'll be mirroring the Pi's HDMI output to the display using the fbcp utility rather than having the display act as a raw framebuffer device, also for convenience.
+
 
 ### Wiring
+The LCD sits neatly on top of the Pi occupying the first 26 pins of the Pi's header, leaving a few pins open for us to use as GPIO inputs. 
 
 Attach the camera and LCD according to the picture below; the LCD should connect to pins 1 through 26 on the raspberry pi, which include the SPI pins that the LCD uses.
+
 
 ![this is an image](IMG-8537.jpg "")
 
