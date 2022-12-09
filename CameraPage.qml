@@ -3,11 +3,6 @@ import QtMultimedia 5.12
 
 Item {
 
-    onVisibleChanged:
-    {
-        camera.start();
-    }
-
     Camera
     {
         id: camera
@@ -70,7 +65,6 @@ Item {
         anchors.fill: parent
         onClicked:
         {
-            camera.stop();
             rootPage.reqSettingsPage();
         }
     }
