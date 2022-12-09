@@ -1,22 +1,25 @@
-# High Quality Digital Camera with GUI Touchscreen
+# Raspberry Pi Handheld Touchscreen Camera with Touchscreen and HQ Camera Module
 
-## Project Team Members
-
+Project Team Members:
 David Nguyen, Saniya Datir, Dominik Fill
+
 
 ## Project Overview
 
 //Summarize goals of project, desired capabilities, and primary hardware components.
 
-This project combines a high-quality camera with an LCD touchscreen, an encoder, and a Raspberry Pi 4B to create a functional camera held together with a retro 3D printed housing.  This camera has a shutter button to snap pictures and timelapse, an encoder to control exposure compensation, and has a GUI that can be used to switch between these modes, to display images taken with the camera that are stored in memory, and to display live view from the camera.  The 3D-printed housing allows space for attachment to a power supply and has openings for connections to the camera's tripod mount and the raspberry pi's power connector.
+This project combines the Raspberry Pi HQ camera module with an LCD touchscreen, combination pushbutton rotary encoder, and a Raspberry Pi 4B to create a retro-style digital handheld camera.
+
+This camera has a shutter button to take pictures, a rotary encoder to control timelapse settings, and a GUI that can be used to switch between pages, whether it'd to display images taken with the camera, or to display live view from the camera.  The 3D-printed housing still allows access to the HQ camera module's tripod mount.
 
 ## Hardware Setup
 
-### Components List
+### What you'll need:
 
-Raspberry Pi 4B
+Raspberry Pi 4B (or any Raspberry Pi platform capable of running 64-bit Raspian)
 
 [Raspberry Pi High Quality HQ Camera - 12MP](https://www.adafruit.com/product/4561)
+(any C-mount lens is compatible with the HQ camera module. Adjustable backfocus on the module allows for most lenses to work with a given adapter to C-mount)
 
 [16mm 10MP Telephoto Lens for Raspberry Pi HQ Camera - 10MP](https://www.adafruit.com/product/4562)
 
@@ -24,7 +27,7 @@ Raspberry Pi 4B
 
 KY-040 Rotary Encoder Module
 
-Power Supply //TODO give some specs like amps and voltage
+Power Supply 
 
 ### Wiring
 
