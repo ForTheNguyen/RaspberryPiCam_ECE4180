@@ -44,7 +44,8 @@ Wire the encoder to the raspberry pi as described in the following pinout.
 
 ## Software Setup
 
-Install [Raspberry Pi Imager](https://www.raspberrypi.com/software/) on computer and format the SD card with the Raspberry Pi OS (64-bit) operating system.  This systems is necessary for use with QT Creator for the GUI.  Boot up raspberry pi, follow the prompts on the screen, and once finished, run the following commands to update and install necessary software for LCD and GUI.  See installation instructions for [the LCD](https://learn.adafruit.com/adafruit-pitft-28-inch-resistive-touchscreen-display-raspberry-pi?view=all) and [QT Creator](https://forums.raspberrypi.com/viewtopic.php?t=69163) for more info for these steps.
+Install [Raspberry Pi Imager](https://www.raspberrypi.com/software/) on computer and format the SD card with the Raspberry Pi OS (64-bit) operating system.  This systems is necessary for use with QT Creator for the GUI.  Boot up raspberry pi, follow the prompts on the screen, and once finished, run the following commands to update and install necessary software for LCD and GUI.
+See installation instructions for [the LCD](https://learn.adafruit.com/adafruit-pitft-28-inch-resistive-touchscreen-display-raspberry-pi?view=all) and [QT Creator](https://forums.raspberrypi.com/viewtopic.php?t=69163) for more info for these steps.  [This link lists possible libraries needed for installing)(https://github.com/PhysicsX/QTonRaspberryPi).
 
 ```
 sudo apt-get update
@@ -78,11 +79,7 @@ Websites and Repos
 
 ruha.camera
 
-https://learn.adafruit.com/adafruit-pitft-28-inch-resistive-touchscreen-display-raspberry-pi
-
 https://forums.raspberrypi.com/viewtopic.php?t=69163
-
-https://github.com/PhysicsX/QTonRaspberryPi
 
 https://github.com/vigasan/RpiGpio
 
