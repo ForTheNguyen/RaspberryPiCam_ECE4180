@@ -77,8 +77,6 @@ The most lacking significant improvement is the use of a rechargeable battery in
 
 ## List of similar projects
 
-Websites and Repos
-
 [Ruha Camera](https://github.com/penk/ruha.camera)
 
 [Vintage Raspberry Pi Camera](https://www.instructables.com/Vintage-Raspberry-Pi-Camera/)
