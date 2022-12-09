@@ -134,7 +134,7 @@ sudo nano /boot/config.txt
 
 
 ## Assembly
-Our assembly goes into our 3D-printed camera body. Obviously this design still needs some tweaking, but will be sufficient for testing out the program and hardware elements.
+Our assembly goes into our 3D-printed camera body. There are 3 STL files in the repo that should be printed with at least 10% infill density and assembled with the rest of the hardware.  Obviously this design still needs some tweaking, but will be sufficient for testing out the program and hardware elements.
 |Screen|Live|
 ---|---
 ![Live](0B1FB612-A941-4110-AC03-1E528FE60D9A.jpeg "")|![Screen](E16430FE-3908-4460-BE77-C593715A7C01.jpeg "")
