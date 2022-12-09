@@ -69,6 +69,12 @@ Say what we achieved, and show videos and maybe pictures.
 
 The most lacking significant improvement is the use of a rechargeable battery instead of a power supply.  Future work for visual content capabilities includes video capture and playback, and a photo burst capability.  Lastly, the GUI could be further developed to edit images stored in memory.
 
+## References
+
+[Project that interfaces GPIO with QML](https://github.com/vigasan/RpiGpio)
+
+[Project that intefaces the camera with C++ and QML](https://github.com/vigasan/CameraRpi)
+
 ## List of similar projects
 
 Youtube videos
@@ -84,10 +90,6 @@ Websites and Repos
 [Raspberry Pi Makes Your Retro Analogue Camera Digital](https://www.raspberrypi.com/news/raspberry-pi-makes-your-retro-analogue-camera-digital/)
 
 https://forums.raspberrypi.com/viewtopic.php?t=69163
-
-[Project that interfaces GPIO with QML](https://github.com/vigasan/RpiGpio)
-
-[Project that intefaces the camera with C++ and QML](https://github.com/vigasan/CameraRpi)
 
 ## Notes (should be deleted eventually)
 
