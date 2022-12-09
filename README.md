@@ -79,6 +79,10 @@ Websites and Repos
 
 ruha.camera
 
+https://www.instructables.com/Vintage-Raspberry-Pi-Camera/
+
+https://www.raspberrypi.com/news/raspberry-pi-makes-your-retro-analogue-camera-digital/
+
 https://forums.raspberrypi.com/viewtopic.php?t=69163
 
 https://github.com/vigasan/RpiGpio
