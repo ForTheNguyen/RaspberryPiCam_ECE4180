@@ -1,5 +1,7 @@
 # Raspberry Pi Handheld Touchscreen Camera with Touchscreen and HQ Camera Module
 
+![cover](4FC4117C-1A5B-4631-A08B-EB8956C44C58.jpeg "")
+
 Project Team Members:
 David Nguyen, Saniya Datir, Dominik Fill
 
@@ -124,7 +126,10 @@ See the full installation instructions for [the LCD](https://learn.adafruit.com/
 
 ## Assembly
 Our assembly goes into our 3D-printed camera body. Obviously this design still needs some tweaking, but will be sufficient for testing out the program and hardware elements.
-![It kinda fit.](788E84C5-32A6-4CE9-B882-85BF2F5613DF.jpeg "")
+|Screen|Live|
+---|---
+![Live](0B1FB612-A941-4110-AC03-1E528FE60D9A.jpeg "")|![Screen](E16430FE-3908-4460-BE77-C593715A7C01.jpeg "")
+
 
 
 ## Results
