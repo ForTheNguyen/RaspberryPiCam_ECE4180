@@ -74,8 +74,6 @@ Youtube videos
 
 https://www.youtube.com/watch?v=8PDsi6aq5ho
 
-https://www.youtube.com/watch?v=HxNHlhv74tA
-
 Websites and Repos
 
 ruha.camera
@@ -87,6 +85,7 @@ https://forums.raspberrypi.com/viewtopic.php?t=69163
 https://github.com/PhysicsX/QTonRaspberryPi
 
 https://github.com/vigasan/RpiGpio
+
 https://github.com/vigasan/CameraRpi
 
 ## Notes (should be deleted eventually)
