@@ -105,9 +105,12 @@ If you're developing on the Pi like we are, the default make flags can cause the
 make -j2
 ```
 
-When it comes time to install the LCD, Adafruit provides a detailed guide to installing drivers for their LCDs. You should save this step after finishing your project as their easy installer changes the resolution of the HDMI-out to 640x480 if you go the fbcp route. Of course, you can change the resolution back to whatever you desire and the LCD screen will downscale the image to fit automatically. For legibility of text and fonts, it's best to change the resolution back to something closer to the LCD after you're done developing. In this case, the Adafruit 2.8" PiTFT has a resolution of 320x240. Setting the HDMI resolution to 640x480 causes the image to downscale with a factor of 2 for the LCD. 
+When it comes time to install the LCD, Adafruit provides a [detailed guide](https://learn.adafruit.com/adafruit-pitft-28-inch-resistive-touchscreen-display-raspberry-pi?view=all)  to installing drivers for their LCDs. You should save this step after finishing your project as their easy installer changes the resolution of the HDMI-out to 640x480 if you go the fbcp route. If you don't, you can still change the resolution back to whatever you desire and the LCD screen will downscale the image to fit automatically. For legibility of text and fonts, it's best to change the resolution back to something closer to the LCD after you're done developing. In this case, the Adafruit 2.8" PiTFT has a resolution of 320x240. Setting the HDMI resolution to 640x480 causes the image to downscale with a factor of 2 for the LCD. 
 
 Adafruit's Easy Installer provides three options for configuring the LCD: console mode, HDMI mirror mode, and raw framebuffer mode. Console mode outputs only text to the LCD and no touchscreen functionality. Mirror mode will mirror the HDMI output onto the LCD using fbcp, a framebuffer utility. Raw framebuffer mode will only display through code (i.e. you have to write a program and send it manually to the LCD), leaving the HDMI output untouched. This project will use the HDMI mirror mode for simplicity at the expense of some efficiency.
+
+Check out the link to the Adafruit page for a better explaination.
+
 
 To get started, we'll need some dependencies and Adafruit's driver.
 ```
@@ -128,9 +131,6 @@ Resolution settings can be changed in /boot/config.txt
 ```
 sudo nano /boot/config.txt
 ```
-
-See the full installation instructions for [the LCD](https://learn.adafruit.com/adafruit-pitft-28-inch-resistive-touchscreen-display-raspberry-pi?view=all) for more details and configuration options.
-
 
 
 ## Assembly
