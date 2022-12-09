@@ -1,3 +1,10 @@
+/*
+This specific page is heavily referenced from another user's demo showcasing
+the use of Qt Multimedia library on a Raspberry Pi. 
+Credit is attributed accordingly:
+https://github.com/vigasan/CameraRpi/tree/main/CameraRpi
+*/
+
 import QtQuick 2.0
 import Qt.labs.folderlistmodel 2.12
 
